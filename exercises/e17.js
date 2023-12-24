@@ -1,4 +1,3 @@
-
 // EXERCISE 17
 // Please, read the exercise-info/includes.md to get the initial data of what is the expected result of this exercise.
 // doesArrayInclude(['a', 'b', 'c'], 'a') => true
@@ -8,9 +7,18 @@
 export function doesArrayInclude(array, value) {
   // Your code goes here...
 
+  let newArray = [];
+  let included;
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].indexOf(value) === -1) {
+      included = false;
+    } else {
+      included = true;
+    }
+  }
+  return included;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-17"
