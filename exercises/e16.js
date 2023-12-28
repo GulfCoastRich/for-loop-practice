@@ -6,14 +6,15 @@
 
 export function flatArrays(array) {
   // Your code goes here...
-  var newArray = [];
-  for (let i = 0; i < array.length; i++) {
-    if (Array.isArray(array[i])) {
-      newArray = newArray.concat(flatArrays(array[i]));
-    } else {
-      newArray.push(array[i]);
+  let newArray = [];
+  for(let i in array){
+    for(let j in array[i]){
+      let str = array[i][j];
+      newArray.push(str);
     }
+
   }
+
   return newArray;
 }
 

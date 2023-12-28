@@ -7,7 +7,6 @@
 export function doesArrayInclude(array, value) {
   // Your code goes here...
 
-  let newArray = [];
   let included;
 
   for (let i = 0; i < array.length; i++) {
